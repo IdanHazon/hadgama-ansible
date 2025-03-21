@@ -2,5 +2,5 @@
  - name: Remove web servers
    hosts: students 
    become: yes
-   tasks:
+   roles:
    - remove_web

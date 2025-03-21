@@ -1,1 +1,0 @@
-# hadgama-ansible

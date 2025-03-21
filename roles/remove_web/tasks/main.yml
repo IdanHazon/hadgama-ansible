@@ -4,6 +4,10 @@
         path: /etc/nginx/nginx.conf
         state: absent
 
+    - name: Fix nginx.conf path
+      shell:
+        cmd: mv /etc/nginx/nginx.conf*@* /etc/nginx/nginx.conf
+
     - name: Remove data directory
       file:
         path: /my-web-server
@@ -14,7 +18,3 @@
         name: nginx
         state: stopped
 
-    - name: Remove Nginx package
-      yum:
-        name: nginx
-        state: absent
