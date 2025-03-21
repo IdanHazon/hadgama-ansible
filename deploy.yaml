@@ -1,0 +1,7 @@
+--- 
+ - name: Deploy web servers
+   hosts: students 
+   become: yes 
+   roles:
+     - deploy_web
+

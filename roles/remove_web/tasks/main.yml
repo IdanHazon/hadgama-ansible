@@ -1,0 +1,20 @@
+---
+    - name: Remove Nginx configuration file
+      file:
+        path: /etc/nginx/nginx.conf
+        state: absent
+
+    - name: Remove data directory
+      file:
+        path: /my-web-server
+        state: absent
+
+    - name: Stop Nginx service
+      service:
+        name: nginx
+        state: stopped
+
+    - name: Remove Nginx package
+      yum:
+        name: nginx
+        state: absent

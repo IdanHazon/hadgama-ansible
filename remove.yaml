@@ -1,0 +1,6 @@
+---
+ - name: Remove web servers
+   hosts: students 
+   become: yes
+   tasks:
+   - remove_web
